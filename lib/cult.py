@@ -49,5 +49,6 @@ class Cult:
     @property
     def average_age(self):
         total = 0
-        for c in Cult.all:
-            total += c.age
+        for f in self.followers:
+            total += f.age
+        return total/(len(self.followers))
