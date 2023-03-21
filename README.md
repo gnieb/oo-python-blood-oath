@@ -1,6 +1,9 @@
 Blood Oath Lab
 ==============
 
+
+
+
 In this project, we will be practicing object relationships in Python, with a particular emphasis on the `has many` `through` relationship (aka: many-to-many). Please read the whole README before writing any code!
 
 ## Introduction
@@ -14,6 +17,9 @@ You've been approached by your local cult leaders to build out a foundation for 
 You can now view all of your Python files for your models in the `lib` folder. They will be automagically available for you so long as you use the `python debug.py` file to test your code.
 
 Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `python debug.py` from the command line. You'll be able to test out the functionality that you write there. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
+
+
+Followers ------< Blood Oath >-------- Cult
 
 
 ---
