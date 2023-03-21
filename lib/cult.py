@@ -52,3 +52,8 @@ class Cult:
         for f in self.followers:
             total += f.age
         return total/(len(self.followers))
+
+    @property
+    def my_followers_mottos(self):
+        for f in self.followers:
+            print(f.life_motto)
