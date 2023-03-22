@@ -31,3 +31,19 @@ class Follower:
         for c in self.cults:
             print(c.slogan)
     
+    @classmethod
+    def most_active(cls):
+        most_cults = 0
+        found_follower = ''
+        for f in cls.all:
+            if len(f.cults) > most_cults:
+                most_cults = len(f.cults)
+                found_follower = f.name
+        return found_follower
+
+            
+
+    
+    @classmethod
+    def top_ten():
+        pass

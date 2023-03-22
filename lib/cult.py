@@ -68,7 +68,15 @@ class Cult:
                 least_pop = len(c.followers)
         return foundcult.name
     
+    @classmethod
+    def most_common_location(cls):
+        common_location_count = 0
+        found_location = ''
+        for c.city in cls.all:
+            if 
 
-    def most_common_location():
-        pass
-    
+
+    # returns a string rep the city that has the most cults.
+    # tried a dictionary 
+    # number of cults in a city 
+

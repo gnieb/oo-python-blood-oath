@@ -15,7 +15,7 @@ f3 = Follower('Kimberly', 31, 'Just do it')
 
 b1 = BloodOath('1999-10-31', c1, f1)
 b2 = BloodOath('2004-04-27', c1, f2)
-b3 = BloodOath('2005-04-27', c2, f3)
+b3 = BloodOath('2005-04-27', c2, f2)
 
 
 
