@@ -57,3 +57,14 @@ class Cult:
     def my_followers_mottos(self):
         for f in self.followers:
             print(f.life_motto)
+
+    @classmethod
+    def least_popular(cls):
+        least_pop = 10000
+        foundcult = ''
+        for c in cls.all:
+            if len(c.followers) < least_pop:
+                foundcult = c
+                least_pop = len(c.followers)
+        return foundcult.name
+    
