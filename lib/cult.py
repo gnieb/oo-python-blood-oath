@@ -68,3 +68,7 @@ class Cult:
                 least_pop = len(c.followers)
         return foundcult.name
     
+
+    def most_common_location():
+        pass
+    

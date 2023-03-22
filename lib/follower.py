@@ -26,5 +26,8 @@ class Follower:
     def of_a_certain_age(cls, age):
         return [f for f in Follower.all if f.age >= age]
 
-
+    @property
+    def my_cults_slogans(self):
+        for c in self.cults:
+            print(c.slogan)
     
