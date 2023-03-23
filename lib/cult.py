@@ -3,80 +3,35 @@ from .bloodoath import BloodOath
 class Cult:
     
     all = []
-    
-    def __init__(self, name, city, founding_year, slogan):
+
+    def __init__(self, name, location, fy, slogan):
         self.name = name
-        self.city = city
-        self.fy = founding_year
+        self.location = location
+        self.fy = fy
         self.slogan = slogan
         Cult.all.append(self)
-
-    @property
-    def oaths(self):
-        return [o for o in BloodOath.all if o.cult == self]
     
-    @property
-    def followers(self):
-        return [o.follower for o in self.oaths]
-
     def recruit_follower(self, follower, date = '2023-03-23'):
-        return BloodOath(date, follower, self)
+        BloodOath(date, self, follower)
+
+    @property
+    def cult_followers(self):
+        return [b.follower for b in BloodOath.all if b.cult == self]
     
     @property
     def cult_population(self):
-        return len(self.followers)
-    
-    @classmethod
-    def find_by_name(cls, str):
-        for c in Cult.all:
-            if c.name == str:
-                return c
-            else:
-                return None
-            
-    @classmethod
-    def find_by_location(cls, city):
-        return [c for c in Cult.all if c.city == city ]
-    
-    @classmethod
-    def find_by_founding_year(cls, year):
-        for c in Cult.all:
-            if c.fy == year:
-                return c
-            else:
-                return None
-            
-    @property
-    def average_age(self):
-        total = 0
-        for f in self.followers:
-            total += f.age
-        return total/(len(self.followers))
-
-    @property
-    def my_followers_mottos(self):
-        for f in self.followers:
-            print(f.life_motto)
+        return len(self.cult_followers)
 
     @classmethod
-    def least_popular(cls):
-        least_pop = 10000
-        foundcult = ''
+    def find_by_name(cls, string):
         for c in cls.all:
-            if len(c.followers) < least_pop:
-                foundcult = c
-                least_pop = len(c.followers)
-        return foundcult.name
+            if c.name == string:
+                return c
+        
+    @classmethod
+    def find_by_location(cls, string):
+        return [c for c in cls.all if c.location == string]
     
     @classmethod
-    def most_common_location(cls):
-        common_location_count = 0
-        found_location = ''
-        for c.city in cls.all:
-            if 
-
-
-    # returns a string rep the city that has the most cults.
-    # tried a dictionary 
-    # number of cults in a city 
-
+    def find_by_founding_year(cls, number):
+        return [c for c in cls.all if c.fy == number]

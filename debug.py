@@ -8,6 +8,7 @@ from lib import *
 c1 = Cult( 'Heavens Gate', 'San Diego', 1974, 'Human Metamorphosis' )
 c2 = Cult('The Little Stinkers', 'Vermont', 1945, 'Help' )
 c3 = Cult("Watchtower Society", "New York", 1888, "To fear God is not to")
+c4 = Cult("Watchtower Society2", "New York", 1888, "To fear God is not to")
 
 f1 = Follower('Bryn', 27, 'May I ask a question?' )
 f2 = Follower( 'Emiley', 31, 'Living the Dream' )

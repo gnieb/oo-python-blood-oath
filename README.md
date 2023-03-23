@@ -19,7 +19,7 @@ You can now view all of your Python files for your models in the `lib` folder. T
 Through this file, we've provided to you a console that you can use to test your code. To enter a console session, run `python debug.py` from the command line. You'll be able to test out the functionality that you write there. Take a look at that file to see how you can pre-define variables and create object instances, rather than manually doing it in every single console session.
 
 
-Followers ------< Blood Oath >-------- Cult
+Followers --< Blood Oath >-- Cult
 
 
 ---
