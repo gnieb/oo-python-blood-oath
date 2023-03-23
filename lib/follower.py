@@ -20,3 +20,24 @@ class Follower:
     @classmethod
     def of_a_certain_age(cls, integer):
         return [f for f in cls.all if f.age > integer]
+
+    @property
+    def my_cults_slogans(self):
+        for c in self.cults:
+            print(c.slogan)
+
+    @classmethod
+    def most_active(cls):
+        cult_count = 0
+        most_cults = ''
+        for b in BloodOath.all:
+            if len(b.follower.cults) > cult_count:
+                cult_count = len(b.follower.cults)
+                most_cults = b.follower.name
+
+        return most_cults
+            
+#####skip######
+    @classmethod
+    def top_ten(cls):
+        pass        
