@@ -12,11 +12,11 @@ class Follower:
 
     @property
     def cults(self):
-        pass
+        return [b.cult for b in BloodOath.all if b.follower == self]
 
-    def join_cult(self, cult_inst):
-        pass
-
-    def of_a_certain_age(self, integer):
-        pass
+    def join_cult(self, date, cult_inst):
+        BloodOath(date, cult_inst, self )
     
+    @classmethod
+    def of_a_certain_age(cls, integer):
+        return [f for f in cls.all if f.age > integer]
